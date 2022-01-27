@@ -1,10 +1,13 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 // [CreateAssetMenu(fileName = "PlayerMovementState", menuName = "Player States/Movement")]
 public class PostState : PlayerState
 {
+	private float maxDistanceToPost = 1.5f;
 	public PostState(PlayerScript player) : base(player)
 	{
 	}
@@ -12,7 +15,10 @@ public class PostState : PlayerState
 	public override void Enter()
 	{
 		// find the closest postable point to post
-		if ( /*the closest point is not in range to post */true)
+		var closest = GetClosestPostable();
+		var sqrDistance = (closest.GetPostPosition() - player.transform.position).sqrMagnitude;
+		//todo - need to check also for colliders!
+		if ( /*the closest point is not in range to post*/true)
 		{
 			//play animation can't do post
 		}
@@ -36,5 +42,13 @@ public class PostState : PlayerState
 
 	public override void Exit()
 	{
+	}
+
+	private Postable GetClosestPostable()
+	{
+		var closest = GameManager.Instance.Postables
+			.OrderBy(p => (p.GetPostPosition() - player.transform.position).sqrMagnitude)
+			.First();
+		return closest;
 	}
 }
