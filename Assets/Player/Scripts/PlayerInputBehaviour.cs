@@ -11,8 +11,8 @@ public class PlayerInputBehaviour : MonoBehaviour
 	public bool IsSwap { get; set; }
 
 	public UnityAction<Vector2> OnMovementAction;
-	public UnityAction<bool> OnPostAction;
-	public UnityAction<bool> OnSwapAction;
+	public UnityAction OnPostAction;
+	public UnityAction OnSwapAction;
 
 	public void OnMovement(InputValue value)
 	{
@@ -29,24 +29,24 @@ public class PlayerInputBehaviour : MonoBehaviour
 	public void OnPost(InputValue value)
 	{
 		IsPost = value.isPressed;
-		OnPostAction?.Invoke(IsPost);
+		OnPostAction?.Invoke();
 	}
 	
 	public void OnPost(InputAction.CallbackContext context)
 	{
 		IsPost = context.ReadValueAsButton();
-		OnPostAction?.Invoke(IsPost);
+		OnPostAction?.Invoke();
 	}
 	
 	public void OnSwap(InputValue value)
 	{
 		IsSwap = value.isPressed;
-		OnSwapAction?.Invoke(IsSwap);
+		OnSwapAction?.Invoke();
 	}
 	
 	public void OnSwap(InputAction.CallbackContext context)
 	{
 		IsSwap = context.ReadValueAsButton();
-		OnSwapAction?.Invoke(IsSwap);
+		OnSwapAction?.Invoke();
 	}
 }

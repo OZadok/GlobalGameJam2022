@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 249650441658264529}
   - component: {fileID: 1555154724636256870}
   - component: {fileID: 3612511258570211653}
-  - component: {fileID: 4008834957760010095}
+  - component: {fileID: 3718862054292470830}
   - component: {fileID: 6003017165652913810}
   m_Layer: 0
   m_Name: Player
@@ -64,7 +64,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &4008834957760010095
+--- !u!114 &3718862054292470830
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -73,13 +73,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 249650441658264528}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1ddce027e5c96e498c664e4c19f48b2, type: 3}
+  m_Script: {fileID: 11500000, guid: ee9ac1755eb537c49ad1da6d635cc4df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerInputBehaviour: {fileID: 1555154724636256870}
-  playerCamera: {fileID: 0}
-  rigidbody: {fileID: 3612511258570211653}
-  speed: 50
+  <InputBehaviour>k__BackingField: {fileID: 1555154724636256870}
+  <PlayerCamera>k__BackingField: {fileID: 0}
+  <Rigidbody>k__BackingField: {fileID: 3612511258570211653}
 --- !u!114 &6003017165652913810
 MonoBehaviour:
   m_ObjectHideFlags: 0
