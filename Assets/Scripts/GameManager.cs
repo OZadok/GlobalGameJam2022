@@ -16,6 +16,8 @@ public class GameManager : MonoBehaviour
     [Header("Parameters")]
     public LayerMask blockViewMask;
     public List<Postable> Postables { get; set; }
+    
+    public Dictionary<FamilyType, FamilyBoss> FamilyBossDictionary;
 
     public UnityAction<Poster> OnPosterPost;
 
@@ -23,6 +25,13 @@ public class GameManager : MonoBehaviour
     {
         Instance = this;
         Postables = new List<Postable>();
+    }
+
+    private void Start()
+    {
+        FamilyBossDictionary = new Dictionary<FamilyType, FamilyBoss>();
+        FamilyBossDictionary.Add(FamilyType.A, new FamilyBoss());
+        FamilyBossDictionary.Add(FamilyType.B, new FamilyBoss());
     }
 
     public void RegisterPostable(Postable postable)
