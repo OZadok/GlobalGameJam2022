@@ -35,7 +35,10 @@ public class PlayerInputBehaviour : MonoBehaviour
 	public void OnPost(InputAction.CallbackContext context)
 	{
 		IsPost = context.ReadValueAsButton();
-		OnPostAction?.Invoke();
+		if (IsPost)
+		{
+			OnPostAction?.Invoke();
+		}
 	}
 	
 	public void OnSwap(InputValue value)
@@ -47,6 +50,9 @@ public class PlayerInputBehaviour : MonoBehaviour
 	public void OnSwap(InputAction.CallbackContext context)
 	{
 		IsSwap = context.ReadValueAsButton();
-		OnSwapAction?.Invoke();
+		if (IsSwap)
+		{
+			OnSwapAction?.Invoke();
+		}
 	}
 }

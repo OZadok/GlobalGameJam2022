@@ -16,6 +16,8 @@ public class PlayerScript : MonoBehaviour
 	public PostState PostState;
 	public SwapState SwapState;
 
+	public FamilyType FamilyType = FamilyType.None;
+
 	private void Awake()
 	{
 		if (InputBehaviour == null)

@@ -7,29 +7,14 @@ using UnityEngine;
 // [CreateAssetMenu(fileName = "PlayerMovementState", menuName = "Player States/Movement")]
 public class PostState : PlayerState
 {
-	private float maxDistanceToPost = 1.5f;
+	private float maxDistanceToPost = 3.5f;
 	public PostState(PlayerScript player) : base(player)
 	{
 	}
 
 	public override void Enter()
 	{
-		// find the closest postable point to post
-		var closest = GetClosestPostable();
-		var sqrDistance = (closest.GetPostPosition() - player.transform.position).sqrMagnitude;
-		//todo - need to check also for colliders!
-		if ( /*the closest point is not in range to post*/true)
-		{
-			//play animation can't do post
-		}
-		else
-		{
-			// play post animation.
-			//at the end of the animation: post the poster(with type) on the postable object.
-		}
-		
-		//at the end: exit to movement
-		
+		player.StartCoroutine(EnterEnumerable());
 	}
 
 	public override void ExecuteUpdate()
@@ -44,11 +29,58 @@ public class PostState : PlayerState
 	{
 	}
 
-	private Postable GetClosestPostable()
+	private Postable GetClosestValidPostable()
 	{
-		var closest = GameManager.Instance.Postables
-			.OrderBy(p => (p.GetPostPosition() - player.transform.position).sqrMagnitude)
-			.First();
-		return closest;
+		Postable closestValid = null;
+		var minSqrDistance = maxDistanceToPost * maxDistanceToPost;
+		foreach (var postable in GameManager.Instance.Postables)
+		{
+			var diff = postable.GetPostPosition() - player.transform.position;
+			diff.y = 0;
+			var sqrDistance = (diff).sqrMagnitude;
+			if (sqrDistance < minSqrDistance && postable.transform.CanSee(player.transform))
+			{
+				minSqrDistance = sqrDistance;
+				closestValid = postable;
+			}
+			
+		}
+
+		return closestValid;
+	}
+
+	private IEnumerator EnterEnumerable()
+	{
+		// find the closest postable point to post
+		var closest = GetClosestValidPostable();
+		if (closest == null)
+		{
+			yield return player.StartCoroutine(CantPost());
+		}
+		else
+		{
+			yield return player.StartCoroutine(Post(closest));
+		}
+
+		ChangeToMovement();
+	}
+
+	private IEnumerator Post(Postable postable)
+	{
+		//create poster
+		var poster = GameManager.Instance.GetPosterOfType(player.FamilyType);
+		// play post animation.
+		//at the end of the animation: post the poster(with type) on the postable object.
+		postable.Post(poster);
+		yield return null;
+		yield return new WaitForSeconds(1f);
+	}
+	
+	private IEnumerator CantPost()
+	{
+		//play animation can't do post
+		// wait for the animation to end
+		yield return null;
+		yield return new WaitForSeconds(1f);
 	}
 }

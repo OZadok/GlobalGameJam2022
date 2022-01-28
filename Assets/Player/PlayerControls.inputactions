@@ -11,7 +11,8 @@
                     "id": "eb6d7c59-1a1f-4fc5-81be-8409a95638ef",
                     "expectedControlType": "Vector2",
                     "processors": "StickDeadzone",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": true
                 },
                 {
                     "name": "Post",
@@ -19,7 +20,8 @@
                     "id": "10e7315e-633e-4b3a-be7a-5382d6fd73fa",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "Press",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "Swap",
@@ -27,7 +29,8 @@
                     "id": "8307a383-45fe-42fa-aca2-d854d059bad5",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "Press",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [

@@ -20,9 +20,10 @@ public class Postable : MonoBehaviour
         GameManager.Instance.RegisterPostable(this);
     }
 
-    public void Post(GameObject gameObjectToPost)
+    public void Post(Poster poster)
     {
-        
+        poster.transform.position = GetPostPosition();
+        GameManager.Instance.OnPosterPost?.Invoke(poster);
     }
 
     public Vector3 GetPostPosition()
