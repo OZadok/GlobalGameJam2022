@@ -10,6 +10,9 @@ public class TimerUI : MonoBehaviour
 
    private void Update()
    {
-      timerText.text = GameManager.Instance.SalaryTimer.GetTimeRemain().ToString("00");
+      if (GameManager.Instance)
+      {
+         timerText.text = GameManager.Instance.SalaryTimer.GetTimeRemain().ToString("00");
+      }
    }
 }
