@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class SwapState : PlayerState
 {
+	private static readonly int Swap1 = Animator.StringToHash("Swap");
+
 	public SwapState(PlayerScript player) : base(player)
 	{
 	}
@@ -43,7 +45,9 @@ public class SwapState : PlayerState
 
 	private IEnumerator Swap()
 	{
-		// play Swap animation.
+		player.Animator.SetTrigger(Swap1);
+		yield return WaitAnimationTime();
+
 		switch (player.FamilyType)
 		{
 			case FamilyType.A:
@@ -57,15 +61,13 @@ public class SwapState : PlayerState
 				break;
 		}
 		Debug.Log($"player new family type: {player.FamilyType}");
-		yield return null;
-		yield return new WaitForSeconds(1f);
 	}
 	
 	private IEnumerator CantSwap()
 	{
 		//play animation can't do Swap
+		player.Animator.SetTrigger(CantDo);
 		// wait for the animation to end
-		yield return null;
-		yield return new WaitForSeconds(1f);
+		yield return WaitAnimationTime();
 	}
 }

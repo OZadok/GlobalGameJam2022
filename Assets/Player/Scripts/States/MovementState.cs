@@ -19,6 +19,8 @@ public class MovementState : PlayerState
 	{
 		player.InputBehaviour.OnPostAction += ChangeToPost;
 		player.InputBehaviour.OnSwapAction += ChangeToSwap;
+		
+		player.Animator.SetTrigger(player.InputBehaviour.Movement.sqrMagnitude > 0 ? Walk : Idle);
 	}
 
 	public override void ExecuteUpdate()

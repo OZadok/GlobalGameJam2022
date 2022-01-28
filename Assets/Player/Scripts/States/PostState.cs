@@ -8,6 +8,9 @@ using UnityEngine;
 public class PostState : PlayerState
 {
 	private float maxDistanceToPost = 3.5f;
+	private static readonly int Post1 = Animator.StringToHash("Post");
+	
+
 	public PostState(PlayerScript player) : base(player)
 	{
 	}
@@ -55,11 +58,11 @@ public class PostState : PlayerState
 		var closest = GetClosestValidPostable();
 		if (closest == null)
 		{
-			yield return player.StartCoroutine(CantPost());
+			yield return CantPost();
 		}
 		else
 		{
-			yield return player.StartCoroutine(Post(closest));
+			yield return Post(closest);
 		}
 
 		ChangeToMovement();
@@ -67,20 +70,21 @@ public class PostState : PlayerState
 
 	private IEnumerator Post(Postable postable)
 	{
+		
+		// play post animation.
+		player.Animator.SetTrigger(Post1);
+		yield return WaitAnimationTime();
+		//at the end of the animation: post the poster(with type) on the postable object.
 		//create poster
 		var poster = GameManager.Instance.GetPosterOfType(player.FamilyType);
-		// play post animation.
-		//at the end of the animation: post the poster(with type) on the postable object.
 		postable.Post(poster);
-		yield return null;
-		yield return new WaitForSeconds(1f);
 	}
 	
 	private IEnumerator CantPost()
 	{
 		//play animation can't do post
+		player.Animator.SetTrigger(CantDo);
 		// wait for the animation to end
-		yield return null;
-		yield return new WaitForSeconds(1f);
+		yield return WaitAnimationTime();
 	}
 }
