@@ -25,10 +25,7 @@ public class GameManager : MonoBehaviour
     {
         Instance = this;
         Postables = new List<Postable>();
-    }
-
-    private void Start()
-    {
+        
         FamilyBossDictionary = new Dictionary<FamilyType, FamilyBoss>();
         FamilyBossDictionary.Add(FamilyType.A, new FamilyBoss());
         FamilyBossDictionary.Add(FamilyType.B, new FamilyBoss());

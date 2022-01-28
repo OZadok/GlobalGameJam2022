@@ -4,26 +4,28 @@ public class FamilyBoss
 {
     // public FamilyType FamilyType;
 
-    public int MoneyGainedThisPeriod;
-
-    public int Salary
+    private int Salary
     {
         get => salary;
-        set => salary = value;
+        set
+        {
+            salary = value;
+            OnSalaryChange?.Invoke(salary);
+        }
     }
 
     public UnityAction<int> OnSalaryChange;
     private int salary;
 
-    public int GetSalary()
+    public int GetAndZeroSalary()
     {
-        var salary = MoneyGainedThisPeriod;
-        MoneyGainedThisPeriod = 0;
-        return salary;
+        var tempSalary = Salary;
+        Salary = 0;
+        return tempSalary;
     }
 
     public void IncreaseSalary(int amount)
     {
-        
+        Salary += amount;
     }
 }

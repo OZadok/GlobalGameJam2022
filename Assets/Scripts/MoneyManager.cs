@@ -12,7 +12,7 @@ public class MoneyManager : MonoBehaviour
 
     private void OnEndOfPeriod()
     {
-        var salary = GameManager.Instance.FamilyBossDictionary.Values.Sum(familyBoss => familyBoss.GetSalary());
+        var salary = GameManager.Instance.FamilyBossDictionary.Values.Sum(familyBoss => familyBoss.GetAndZeroSalary());
         TotalMoneyGained += salary;
         TotalMoneyGained -= Debt;
         if (TotalMoneyGained < 0)
