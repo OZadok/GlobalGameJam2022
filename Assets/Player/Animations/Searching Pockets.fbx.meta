@@ -1,0 +1,420 @@
+fileFormatVersion: 2
+guid: 3bd8c59280cd73747a611da4facf4079
+ModelImporter:
+  serializedVersion: 21202
+  internalIDToNameTable:
+  - first:
+      74: -203655887218126122
+    second: mixamo.com
+  externalObjects: {}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 1
+    motionNodeName: 
+    rigImportErrors: "Invalid copied Avatar Rig Configuration:\n\tNo human bone found.
+      Ensure both rig type match\n"
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 10
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 0
+    importCameras: 0
+    importLights: 0
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 0
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human:
+    - boneName: texturedMesh1:Hips
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: texturedMesh1:LeftUpLeg
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: texturedMesh1:RightUpLeg
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: texturedMesh1:LeftLeg
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: texturedMesh1:RightLeg
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: texturedMesh1:LeftFoot
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: texturedMesh1:RightFoot
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: texturedMesh1:Spine
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: texturedMesh1:Spine1
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: texturedMesh1:Neck
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: texturedMesh1:Head
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: texturedMesh1:LeftShoulder
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: texturedMesh1:RightShoulder
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: texturedMesh1:LeftArm
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: texturedMesh1:RightArm
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: texturedMesh1:LeftForeArm
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: texturedMesh1:RightForeArm
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: texturedMesh1:LeftHand
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: texturedMesh1:RightHand
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: texturedMesh1:LeftToeBase
+      humanName: LeftToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: texturedMesh1:RightToeBase
+      humanName: RightToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: texturedMesh1:Spine2
+      humanName: UpperChest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: T-Pose(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: texturedMesh1:Hips
+      parentName: T-Pose(Clone)
+      position: {x: 0.0000006149886, y: 0.0021974507, z: 0.000034028053}
+      rotation: {x: -0.0000101801315, y: 0.000066942746, z: -0.00021079049, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: texturedMesh1:LeftUpLeg
+      parentName: texturedMesh1:Hips
+      position: {x: -0.0004152056, y: -0.00029759738, z: -0.000008881032}
+      rotation: {x: -0.010933659, y: 0.022341512, z: 0.99967396, w: 0.0057703513}
+      scale: {x: 1, y: 1, z: 1}
+    - name: texturedMesh1:LeftLeg
+      parentName: texturedMesh1:LeftUpLeg
+      position: {x: -0, y: 0.0006769484, z: 0}
+      rotation: {x: -0.18125248, y: -0.004244857, z: 0.014229939, w: 0.9833245}
+      scale: {x: 1, y: 1, z: 1}
+    - name: texturedMesh1:LeftFoot
+      parentName: texturedMesh1:LeftLeg
+      position: {x: 1.110223e-19, y: 0.00033110596, z: -5.551115e-20}
+      rotation: {x: 0.5093836, y: 0.06040715, z: -0.08478396, w: 0.8542195}
+      scale: {x: 1, y: 1, z: 1}
+    - name: texturedMesh1:LeftToeBase
+      parentName: texturedMesh1:LeftFoot
+      position: {x: 5.551115e-20, y: 0.0011738845, z: -5.551115e-20}
+      rotation: {x: 0.39603925, y: 0.068316385, z: -0.029562525, w: 0.9152114}
+      scale: {x: 1, y: 1, z: 1}
+    - name: texturedMesh1:LeftToe_End
+      parentName: texturedMesh1:LeftToeBase
+      position: {x: -5.551115e-20, y: 0.000445146, z: 6.9388934e-21}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: texturedMesh1:RightUpLeg
+      parentName: texturedMesh1:Hips
+      position: {x: 0.0004152056, y: -0.00029759738, z: -0.0000490151}
+      rotation: {x: 0.004278151, y: 0.041781485, z: 0.99910164, w: -0.0056448323}
+      scale: {x: 1, y: 1, z: 1}
+    - name: texturedMesh1:RightLeg
+      parentName: texturedMesh1:RightUpLeg
+      position: {x: -0, y: 0.0006726167, z: 0}
+      rotation: {x: -0.17701389, y: 0.0027682155, z: -0.015933724, w: 0.9840755}
+      scale: {x: 1, y: 1, z: 1}
+    - name: texturedMesh1:RightFoot
+      parentName: texturedMesh1:RightLeg
+      position: {x: -0, y: 0.00033223734, z: 5.551115e-20}
+      rotation: {x: 0.52319384, y: -0.046519548, z: 0.08873335, w: 0.84630406}
+      scale: {x: 1, y: 1, z: 1}
+    - name: texturedMesh1:RightToeBase
+      parentName: texturedMesh1:RightFoot
+      position: {x: 2.220446e-19, y: 0.0012711494, z: 5.551115e-20}
+      rotation: {x: 0.3603009, y: -0.09359313, z: 0.036360838, w: 0.92741656}
+      scale: {x: 1, y: 1, z: 1}
+    - name: texturedMesh1:RightToe_End
+      parentName: texturedMesh1:RightToeBase
+      position: {x: -0, y: 0.0004447851, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: texturedMesh1:Spine
+      parentName: texturedMesh1:Hips
+      position: {x: -0, y: 0.00053025386, z: 0.0000675075}
+      rotation: {x: 0.06328311, y: -0.00005347123, z: 0.00021460379, w: 0.9979956}
+      scale: {x: 1, y: 1, z: 1}
+    - name: texturedMesh1:Spine1
+      parentName: texturedMesh1:Spine
+      position: {x: -0, y: 0.00062362273, z: 0}
+      rotation: {x: -2.9911384e-26, y: 4.3855537e-14, z: 6.820435e-13, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: texturedMesh1:Spine2
+      parentName: texturedMesh1:Spine1
+      position: {x: -0, y: 0.00071271206, z: 0}
+      rotation: {x: 0, y: 1.6155871e-27, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: texturedMesh1:LeftShoulder
+      parentName: texturedMesh1:Spine2
+      position: {x: -0.00040404894, y: 0.0007154844, z: -0.000013613466}
+      rotation: {x: 0.52994925, y: -0.46538877, z: 0.55096054, w: 0.44610485}
+      scale: {x: 1, y: 1, z: 1}
+    - name: texturedMesh1:LeftArm
+      parentName: texturedMesh1:LeftShoulder
+      position: {x: -0, y: 0.0008002508, z: 8.881784e-19}
+      rotation: {x: -0.08459316, y: 0.004695468, z: -0.020620387, w: 0.99619114}
+      scale: {x: 1, y: 1, z: 1}
+    - name: texturedMesh1:LeftForeArm
+      parentName: texturedMesh1:LeftArm
+      position: {x: 1.110223e-19, y: 0.0012775534, z: 0}
+      rotation: {x: -0.00000032616137, y: -0.0004824743, z: 0.00000006965303, w: 0.9999999}
+      scale: {x: 1, y: 1, z: 1}
+    - name: texturedMesh1:LeftHand
+      parentName: texturedMesh1:LeftForeArm
+      position: {x: -0, y: 0.0009538321, z: -8.881784e-19}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: texturedMesh1:Neck
+      parentName: texturedMesh1:Spine2
+      position: {x: -0, y: 0.0008018005, z: 1.2453237e-11}
+      rotation: {x: -0.06327295, y: 1.6123498e-27, z: 1.0222319e-28, w: 0.9979963}
+      scale: {x: 1, y: 1, z: 1}
+    - name: texturedMesh1:Head
+      parentName: texturedMesh1:Neck
+      position: {x: -0, y: 0.00044000862, z: 0.00020340979}
+      rotation: {x: 0, y: -0, z: -1.6560185e-34, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: texturedMesh1:HeadTop_End
+      parentName: texturedMesh1:Head
+      position: {x: -0, y: 0.0017244305, z: 0.00079717994}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: texturedMesh1:RightShoulder
+      parentName: texturedMesh1:Spine2
+      position: {x: 0.00040404891, y: 0.00072164886, z: 0.000034806766}
+      rotation: {x: 0.55910873, y: 0.44134337, z: -0.5138668, w: 0.47807366}
+      scale: {x: 1, y: 1, z: 1}
+    - name: texturedMesh1:RightArm
+      parentName: texturedMesh1:RightShoulder
+      position: {x: 1.110223e-19, y: 0.00080025085, z: 0}
+      rotation: {x: -0.076573245, y: 0.0007205485, z: -0.041368604, w: 0.99620515}
+      scale: {x: 1, y: 1, z: 1}
+    - name: texturedMesh1:RightForeArm
+      parentName: texturedMesh1:RightArm
+      position: {x: -1.110223e-19, y: 0.0012773812, z: 0}
+      rotation: {x: -0.00000019051694, y: -0.00038951595, z: 0.00000047121986, w: 0.99999994}
+      scale: {x: 1, y: 1, z: 1}
+    - name: texturedMesh1:RightHand
+      parentName: texturedMesh1:RightForeArm
+      position: {x: -1.110223e-19, y: 0.00095703517, z: 8.881784e-19}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: texturedMesh1:TexturedMesh
+      parentName: T-Pose(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 0.099999994
+    rootMotionBoneName: texturedMesh1:Hips
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 04cacf2221751884ea75010e7856d5ea, type: 3}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 3
+  humanoidOversampling: 1
+  avatarSetup: 2
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
