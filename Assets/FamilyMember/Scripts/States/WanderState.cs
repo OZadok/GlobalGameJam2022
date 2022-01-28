@@ -19,7 +19,7 @@ public class WanderState : FamilyMemberState
     {
         this.startWalking = Time.time;
         this.destination = this.familyMember.familyMgr.RequestDestination(this.familyMember);
-        this.familyMember.SetDestination2(destination);
+        this.familyMember.SetDestination(destination);
         GameManager.Instance.OnPosterPost += OnPlayerPosted;
     }
 
@@ -42,7 +42,6 @@ public class WanderState : FamilyMemberState
     }
 
     public void OnPlayerPosted(Poster poster) {
-        Debug.Log("Checking poster");
         if (IsPosterSpotted(poster) && poster.Type == familyMember.family)
         {
             ChangeToGiveMoney();
@@ -67,10 +66,8 @@ public class WanderState : FamilyMemberState
     }
 
     bool IsPosterSpotted(Poster poster) {
-        Debug.Log("comparing poster of " + poster.Type.ToString() + " and " + familyMember.family.ToString());
         bool canSee = familyMember.gameObject.CanSee(poster.gameObject);
         bool isNear = Vector3.Distance(familyMember.transform.position, poster.transform.position) < sightRadius;
-        Debug.Log("canSee: " + canSee.ToString() + ". isNear: " + isNear.ToString());
         return canSee && isNear;
     }
 

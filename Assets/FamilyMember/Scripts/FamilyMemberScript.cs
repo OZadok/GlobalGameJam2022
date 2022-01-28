@@ -56,7 +56,7 @@ public class FamilyMemberScript : MonoBehaviour
         StateMachine.FixedUpdate();
     }
 
-    public  void SetDestination2(Vector3 target)
+    public  void SetDestination(Vector3 target)
     {
         targetGameObject.transform.position = target;
         AICharacterControl.SetTarget(targetGameObject.transform);
