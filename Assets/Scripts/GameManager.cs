@@ -12,6 +12,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Poster posterPrefab;
     [SerializeField] private Poster posterTypeAPrefab;
     [SerializeField] private Poster posterTypeBPrefab;
+
+    public SalaryTimer SalaryTimer;
     
     [Header("Parameters")]
     public LayerMask blockViewMask;
@@ -20,15 +22,22 @@ public class GameManager : MonoBehaviour
     public Dictionary<FamilyType, FamilyBoss> FamilyBossDictionary;
 
     public UnityAction<Poster> OnPosterPost;
+    public UnityAction OnEndOfPeriod;
 
     private void Awake()
     {
         Instance = this;
         Postables = new List<Postable>();
-        
-        FamilyBossDictionary = new Dictionary<FamilyType, FamilyBoss>();
-        FamilyBossDictionary.Add(FamilyType.A, new FamilyBoss());
-        FamilyBossDictionary.Add(FamilyType.B, new FamilyBoss());
+
+        FamilyBossDictionary = new Dictionary<FamilyType, FamilyBoss>
+        {
+            {FamilyType.A, new FamilyBoss()}, {FamilyType.B, new FamilyBoss()}
+        };
+
+        if (SalaryTimer == null)
+        {
+            SalaryTimer = GetComponent<SalaryTimer>();
+        }
     }
 
     public void RegisterPostable(Postable postable)
