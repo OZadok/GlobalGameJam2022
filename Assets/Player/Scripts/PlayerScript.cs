@@ -9,6 +9,7 @@ public class PlayerScript : MonoBehaviour
 	[field: SerializeField] public PlayerInputBehaviour InputBehaviour { get; private set; }
 	[field: SerializeField] public Camera PlayerCamera { get; private set; }
 	[field: SerializeField] public Rigidbody Rigidbody { get; private set; }
+	[field: SerializeField] public Animator Animator { get; private set; }
 
 	internal StateMachine StateMachine;
 
@@ -31,6 +32,10 @@ public class PlayerScript : MonoBehaviour
 		if (Rigidbody == null)
 		{
 			Rigidbody = GetComponent<Rigidbody>();
+		}
+		if (Animator == null)
+		{
+			Animator = GetComponent<Animator>();
 		}
 
 		MovementState = new MovementState(this);
@@ -57,6 +62,10 @@ public class PlayerScript : MonoBehaviour
 		if (Rigidbody == null)
 		{
 			Rigidbody = GetComponent<Rigidbody>();
+		}
+		if (Animator == null)
+		{
+			Animator = GetComponent<Animator>();
 		}
 	}
 

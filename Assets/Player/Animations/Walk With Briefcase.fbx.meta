@@ -67,7 +67,7 @@ ModelImporter:
     isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: 25
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
@@ -296,127 +296,127 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: texturedMesh1:Hips
       parentName: T-Pose(Clone)
-      position: {x: 0.0000061498868, y: 0.021974508, z: 0.00034028056}
+      position: {x: 0.0000015374717, y: 0.0054936265, z: 0.00008507014}
       rotation: {x: -0.0000101801315, y: 0.000066942746, z: -0.00021079049, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: texturedMesh1:LeftUpLeg
       parentName: texturedMesh1:Hips
-      position: {x: -0.0041520563, y: -0.002975974, z: -0.000088810324}
+      position: {x: -0.0010380141, y: -0.0007439935, z: -0.000022202581}
       rotation: {x: -0.010933659, y: 0.022341512, z: 0.99967396, w: 0.0057703513}
       scale: {x: 1, y: 1, z: 1}
     - name: texturedMesh1:LeftLeg
       parentName: texturedMesh1:LeftUpLeg
-      position: {x: -0, y: 0.006769484, z: 0}
+      position: {x: -0, y: 0.001692371, z: 0}
       rotation: {x: -0.18125248, y: -0.004244857, z: 0.014229939, w: 0.9833245}
       scale: {x: 1, y: 1, z: 1}
     - name: texturedMesh1:LeftFoot
       parentName: texturedMesh1:LeftLeg
-      position: {x: 1.110223e-18, y: 0.00331106, z: -5.551115e-19}
+      position: {x: 2.7755575e-19, y: 0.000827765, z: -1.3877787e-19}
       rotation: {x: 0.5093836, y: 0.06040715, z: -0.08478396, w: 0.8542195}
       scale: {x: 1, y: 1, z: 1}
     - name: texturedMesh1:LeftToeBase
       parentName: texturedMesh1:LeftFoot
-      position: {x: 5.551115e-19, y: 0.011738846, z: -5.551115e-19}
+      position: {x: 1.3877787e-19, y: 0.0029347115, z: -1.3877787e-19}
       rotation: {x: 0.39603925, y: 0.068316385, z: -0.029562525, w: 0.9152114}
       scale: {x: 1, y: 1, z: 1}
     - name: texturedMesh1:LeftToe_End
       parentName: texturedMesh1:LeftToeBase
-      position: {x: -5.551115e-19, y: 0.00445146, z: 6.938894e-20}
+      position: {x: -1.3877787e-19, y: 0.001112865, z: 1.7347234e-20}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: texturedMesh1:RightUpLeg
       parentName: texturedMesh1:Hips
-      position: {x: 0.0041520563, y: -0.002975974, z: -0.000490151}
+      position: {x: 0.0010380141, y: -0.0007439935, z: -0.00012253775}
       rotation: {x: 0.004278151, y: 0.041781485, z: 0.99910164, w: -0.0056448323}
       scale: {x: 1, y: 1, z: 1}
     - name: texturedMesh1:RightLeg
       parentName: texturedMesh1:RightUpLeg
-      position: {x: -0, y: 0.006726167, z: 0}
+      position: {x: -0, y: 0.0016815418, z: 0}
       rotation: {x: -0.17701389, y: 0.0027682155, z: -0.015933724, w: 0.9840755}
       scale: {x: 1, y: 1, z: 1}
     - name: texturedMesh1:RightFoot
       parentName: texturedMesh1:RightLeg
-      position: {x: -0, y: 0.0033223736, z: 5.551115e-19}
+      position: {x: -0, y: 0.0008305934, z: 1.3877787e-19}
       rotation: {x: 0.52319384, y: -0.046519548, z: 0.08873335, w: 0.84630406}
       scale: {x: 1, y: 1, z: 1}
     - name: texturedMesh1:RightToeBase
       parentName: texturedMesh1:RightFoot
-      position: {x: 2.220446e-18, y: 0.012711495, z: 5.551115e-19}
+      position: {x: 5.551115e-19, y: 0.0031778738, z: 1.3877787e-19}
       rotation: {x: 0.3603009, y: -0.09359313, z: 0.036360838, w: 0.92741656}
       scale: {x: 1, y: 1, z: 1}
     - name: texturedMesh1:RightToe_End
       parentName: texturedMesh1:RightToeBase
-      position: {x: -0, y: 0.0044478513, z: 0}
+      position: {x: -0, y: 0.0011119628, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: texturedMesh1:Spine
       parentName: texturedMesh1:Hips
-      position: {x: -0, y: 0.0053025386, z: 0.00067507505}
+      position: {x: -0, y: 0.0013256347, z: 0.00016876876}
       rotation: {x: 0.06328311, y: -0.00005347123, z: 0.00021460379, w: 0.9979956}
       scale: {x: 1, y: 1, z: 1}
     - name: texturedMesh1:Spine1
       parentName: texturedMesh1:Spine
-      position: {x: -0, y: 0.0062362277, z: 0}
+      position: {x: -0, y: 0.0015590569, z: 0}
       rotation: {x: -2.9911384e-26, y: 4.3855537e-14, z: 6.820435e-13, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: texturedMesh1:Spine2
       parentName: texturedMesh1:Spine1
-      position: {x: -0, y: 0.0071271206, z: 0}
+      position: {x: -0, y: 0.0017817802, z: 0}
       rotation: {x: 0, y: 1.6155871e-27, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: texturedMesh1:LeftShoulder
       parentName: texturedMesh1:Spine2
-      position: {x: -0.0040404894, y: 0.0071548442, z: -0.00013613467}
+      position: {x: -0.0010101224, y: 0.0017887111, z: -0.000034033666}
       rotation: {x: 0.52994925, y: -0.46538877, z: 0.55096054, w: 0.44610485}
       scale: {x: 1, y: 1, z: 1}
     - name: texturedMesh1:LeftArm
       parentName: texturedMesh1:LeftShoulder
-      position: {x: -0, y: 0.0080025075, z: 8.881784e-18}
+      position: {x: -0, y: 0.0020006269, z: 2.220446e-18}
       rotation: {x: -0.08459316, y: 0.004695468, z: -0.020620387, w: 0.99619114}
       scale: {x: 1, y: 1, z: 1}
     - name: texturedMesh1:LeftForeArm
       parentName: texturedMesh1:LeftArm
-      position: {x: 1.110223e-18, y: 0.012775534, z: 0}
+      position: {x: 2.7755575e-19, y: 0.0031938835, z: 0}
       rotation: {x: -0.00000032616137, y: -0.0004824743, z: 0.00000006965303, w: 0.9999999}
       scale: {x: 1, y: 1, z: 1}
     - name: texturedMesh1:LeftHand
       parentName: texturedMesh1:LeftForeArm
-      position: {x: -0, y: 0.009538322, z: -8.881784e-18}
+      position: {x: -0, y: 0.0023845804, z: -2.220446e-18}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: texturedMesh1:Neck
       parentName: texturedMesh1:Spine2
-      position: {x: -0, y: 0.008018006, z: 1.2453238e-10}
+      position: {x: -0, y: 0.0020045014, z: 3.1133096e-11}
       rotation: {x: -0.06327295, y: 1.6123498e-27, z: 1.0222319e-28, w: 0.9979963}
       scale: {x: 1, y: 1, z: 1}
     - name: texturedMesh1:Head
       parentName: texturedMesh1:Neck
-      position: {x: -0, y: 0.004400086, z: 0.002034098}
+      position: {x: -0, y: 0.0011000214, z: 0.0005085245}
       rotation: {x: 0, y: -0, z: -1.6560185e-34, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: texturedMesh1:HeadTop_End
       parentName: texturedMesh1:Head
-      position: {x: -0, y: 0.017244305, z: 0.0079718}
+      position: {x: -0, y: 0.0043110764, z: 0.00199295}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: texturedMesh1:RightShoulder
       parentName: texturedMesh1:Spine2
-      position: {x: 0.0040404894, y: 0.007216489, z: 0.0003480677}
+      position: {x: 0.0010101224, y: 0.0018041222, z: 0.000087016924}
       rotation: {x: 0.55910873, y: 0.44134337, z: -0.5138668, w: 0.47807366}
       scale: {x: 1, y: 1, z: 1}
     - name: texturedMesh1:RightArm
       parentName: texturedMesh1:RightShoulder
-      position: {x: 1.110223e-18, y: 0.008002508, z: 0}
+      position: {x: 2.7755575e-19, y: 0.002000627, z: 0}
       rotation: {x: -0.076573245, y: 0.0007205485, z: -0.041368604, w: 0.99620515}
       scale: {x: 1, y: 1, z: 1}
     - name: texturedMesh1:RightForeArm
       parentName: texturedMesh1:RightArm
-      position: {x: -1.110223e-18, y: 0.012773813, z: 0}
+      position: {x: -2.7755575e-19, y: 0.0031934532, z: 0}
       rotation: {x: -0.00000019051694, y: -0.00038951595, z: 0.00000047121986, w: 0.99999994}
       scale: {x: 1, y: 1, z: 1}
     - name: texturedMesh1:RightHand
       parentName: texturedMesh1:RightForeArm
-      position: {x: -1.110223e-18, y: 0.009570353, z: 8.881784e-18}
+      position: {x: -2.7755575e-19, y: 0.0023925882, z: 2.220446e-18}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: texturedMesh1:TexturedMesh
@@ -431,7 +431,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 1
+    globalScale: 0.25
     rootMotionBoneName: texturedMesh1:Hips
     hasTranslationDoF: 0
     hasExtraRoot: 1
