@@ -38,7 +38,7 @@ public class PostState : PlayerState
 			var diff = postable.GetPostPosition() - player.transform.position;
 			diff.y = 0;
 			var sqrDistance = (diff).sqrMagnitude;
-			if (sqrDistance < minSqrDistance && postable.transform.CanSee(player.transform))
+			if (sqrDistance < minSqrDistance && postable.transform.CanSee(player.transform) && postable.FamilyType != player.FamilyType)
 			{
 				minSqrDistance = sqrDistance;
 				closestValid = postable;

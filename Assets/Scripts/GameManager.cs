@@ -10,6 +10,8 @@ public class GameManager : MonoBehaviour
 
     [Header("References")] 
     [SerializeField] private Poster posterPrefab;
+    [SerializeField] private Poster posterTypeAPrefab;
+    [SerializeField] private Poster posterTypeBPrefab;
     
     [Header("Parameters")]
     public LayerMask blockViewMask;
@@ -30,7 +32,11 @@ public class GameManager : MonoBehaviour
 
     public Poster GetPosterOfType(FamilyType type)
     {
-        var poster = Instantiate(posterPrefab);
-        return poster;
+        return type switch
+        {
+            FamilyType.A => Instantiate(posterTypeAPrefab),
+            FamilyType.B => Instantiate(posterTypeBPrefab),
+            _ => Instantiate(posterPrefab)
+        };
     }
 }
