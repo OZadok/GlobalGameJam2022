@@ -15,7 +15,7 @@ public class GiveMoneyState : FamilyMemberState
     public override void Enter()
     {
         GameManager.Instance.FamilyBossDictionary[familyMember.family].IncreaseSalary(coins);
-        ChangeToWander();
+        //ChangeToWander();
     }
 
     public override void ExecuteFixedUpdate()

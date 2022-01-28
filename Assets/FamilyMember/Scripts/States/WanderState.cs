@@ -19,7 +19,7 @@ public class WanderState : FamilyMemberState
     {
         this.startWalking = Time.time;
         this.destination = this.familyMember.familyMgr.RequestDestination(this.familyMember);
-        this.familyMember.SetDestination2(destination);
+        this.familyMember.SetDestination(destination);
         GameManager.Instance.OnPosterPost += OnPlayerPosted;
     }
 
