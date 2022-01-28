@@ -89,5 +89,12 @@ public class FamilyMovementManager : MonoBehaviour
         return gatheringSpots[i];
     }
 
-
+    GatheringSpot FindGatheringSpot(FamilyType familyType) {
+        foreach (GatheringSpot gs in gatheringSpots) {
+            if (gs.family == familyType) {
+                return gs; 
+            }
+        }
+        return AssignGatheringSpot(familyType);
+    }
 }
