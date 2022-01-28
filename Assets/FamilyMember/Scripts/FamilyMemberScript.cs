@@ -9,10 +9,12 @@ public class FamilyMemberScript : MonoBehaviour
     public FamilyMovementManager familyMgr { get; private set; }
     public NavMeshAgent agent { get; private set; }
     public Animator animator { get; private set; }
-    
+
+    public FamilyType family;
     internal StateMachine StateMachine;
     public WanderState wanderState;
     public IdleState idleState;
+    public GiveMoneyState giveMoneyState;
 
     void Awake()
     {
@@ -26,6 +28,7 @@ public class FamilyMemberScript : MonoBehaviour
         animator = GetComponent<Animator>();
         wanderState = new WanderState(this);
         idleState = new IdleState(this);
+        giveMoneyState = new GiveMoneyState(this);
         StateMachine = ScriptableObject.CreateInstance<States.StateMachine>();
         StateMachine.ChangeState(wanderState);
     }

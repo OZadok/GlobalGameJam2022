@@ -24,4 +24,8 @@ public abstract class FamilyMemberState : States.IState
         familyMember.StateMachine.ChangeState(familyMember.idleState);
     }
 
+    public void ChangeToGiveMoney() {
+        familyMember.StateMachine.ChangeState(familyMember.giveMoneyState);
+    }
+
 }

@@ -9,7 +9,8 @@ public class WanderState : FamilyMemberState
     float EPSILON = 0.01f;
     public bool isDebug = true;
     float walkTooLong = 12f;
-    float startWalking; 
+    float sightRadius = 6f;
+    float startWalking;
 
     public WanderState(FamilyMemberScript familyMember) : base(familyMember)
     {
@@ -19,6 +20,7 @@ public class WanderState : FamilyMemberState
         this.startWalking = Time.time;
         this.destination = this.familyMember.familyMgr.RequestDestination(this.familyMember);
         this.familyMember.agent.SetDestination(destination);
+        GameManager.Instance.OnPosterPost += OnPlayerPosted;
     }
 
     public override void ExecuteFixedUpdate()
@@ -31,27 +33,42 @@ public class WanderState : FamilyMemberState
         {
             DebugDrawPath();
         }
-        if (IsArrivedAtDestination() || IsWalkingTooLong())
+
+        else if (IsArrivedAtDestination() || IsWalkingTooLong())
         {
             ChangeToIdle();
         }
 
     }
 
+    public void OnPlayerPosted(Poster poster) {
+        if (IsPosterSpotted(poster) && poster.Type == familyMember.family)
+        {
+            ChangeToGiveMoney();
+        }
+    }
+
     public override void Exit()
     {
+        GameManager.Instance.OnPosterPost -= OnPlayerPosted;
     }
 
     bool IsArrivedAtDestination()
     {
         Vector3 familyMemberPos = this.familyMember.transform.position;
         return Vector2.Distance(
-            new Vector2(familyMemberPos.x, familyMemberPos.z), 
+            new Vector2(familyMemberPos.x, familyMemberPos.z),
             new Vector2(destination.x, destination.z)) < EPSILON;
     }
 
     bool IsWalkingTooLong() {
         return (Time.time - this.startWalking) >= walkTooLong;
+    }
+
+    bool IsPosterSpotted(Poster poster) {
+        bool canSee = familyMember.gameObject.CanSee(poster.gameObject);
+        bool isNear = Vector3.Distance(familyMember.transform.position, poster.transform.position) < sightRadius;
+        return canSee && isNear;
     }
 
     void DebugDrawPath()
