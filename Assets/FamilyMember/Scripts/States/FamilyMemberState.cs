@@ -17,7 +17,7 @@ public abstract class FamilyMemberState : States.IState
     public abstract void Exit();
 
     public void ChangeToWander() {
-        familyMember.StateMachine.ChangeState(familyMember.WanderState);
+        familyMember.StateMachine.ChangeState(familyMember.wanderState);
     }
 
     public void ChangeToIdle() {
