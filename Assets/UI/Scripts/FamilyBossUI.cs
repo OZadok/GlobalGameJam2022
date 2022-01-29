@@ -3,11 +3,18 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class FamilyBossUI : MonoBehaviour
 {
 	[Header("References")] 
-	[SerializeField] private TMP_Text salaryText; 
+	[SerializeField] private TMP_Text salaryText;
+
+	[SerializeField] private Image bossImage;
+	[SerializeField] private Sprite bossOK;
+	[SerializeField] private Sprite bossAngry;
+	
+	[Header("Parameters")]
 	[SerializeField] private FamilyType type;
 
 	private FamilyBoss familyBoss;
@@ -15,6 +22,8 @@ public class FamilyBossUI : MonoBehaviour
 	{
 		familyBoss = GameManager.Instance.FamilyBossDictionary[type];
 		familyBoss.OnSalaryChange += OnSalaryChange;
+
+		bossImage.sprite = bossOK;
 	}
 
 	private void OnSalaryChange(int salary)

@@ -399,4 +399,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   salaryText: {fileID: 5962106456791152325}
+  bossImage: {fileID: 1203637297159379793}
+  bossOK: {fileID: 0}
+  bossAngry: {fileID: 0}
   type: 0
