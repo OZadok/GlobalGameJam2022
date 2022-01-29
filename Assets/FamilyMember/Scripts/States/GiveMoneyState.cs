@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class GiveMoneyState : FamilyMemberState
 {
@@ -9,13 +10,14 @@ public class GiveMoneyState : FamilyMemberState
 
     public GiveMoneyState(FamilyMemberScript familyMember) : base(familyMember)
     {
+        
 
     }
 
     public override void Enter()
     {
-        GameManager.Instance.FamilyBossDictionary[familyMember.family].IncreaseSalary(coins);
-        //ChangeToWander();
+
+        familyMember.StartCoroutine(GiveMoney());
     }
 
     public override void ExecuteFixedUpdate()
@@ -31,5 +33,12 @@ public class GiveMoneyState : FamilyMemberState
     public override void Exit()
     {
 
+    }
+
+    private IEnumerator GiveMoney() {
+        familyMember.animator.SetTrigger("Give Money");
+        yield return WaitAnimationTime();
+        GameManager.Instance.FamilyBossDictionary[familyMember.family].IncreaseSalary(coins);
+        ChangeToIdle();
     }
 }

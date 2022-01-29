@@ -18,6 +18,7 @@ public class FamilyMemberScript : MonoBehaviour
     public WanderState wanderState;
     public IdleState idleState;
     public GiveMoneyState giveMoneyState;
+    public TakeMoneyState takeMoneyState;
 
     private GameObject targetGameObject;
 
@@ -38,6 +39,7 @@ public class FamilyMemberScript : MonoBehaviour
         wanderState = new WanderState(this);
         idleState = new IdleState(this);
         giveMoneyState = new GiveMoneyState(this);
+        takeMoneyState = new TakeMoneyState(this);
         StateMachine = ScriptableObject.CreateInstance<States.StateMachine>();
         StateMachine.ChangeState(wanderState);
 

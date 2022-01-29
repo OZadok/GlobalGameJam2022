@@ -28,4 +28,21 @@ public abstract class FamilyMemberState : States.IState
         familyMember.StateMachine.ChangeState(familyMember.giveMoneyState);
     }
 
+    public void ChangeToTakeMoney()
+    {
+        familyMember.StateMachine.ChangeState(familyMember.takeMoneyState);
+    }
+
+    protected float GetAnimationClipLength()
+    {
+        return familyMember.animator.GetCurrentAnimatorClipInfo(0)[0].clip.length;
+    }
+
+    protected IEnumerator WaitAnimationTime()
+    {
+        yield return null;
+        float timeToWait = GetAnimationClipLength();
+        yield return new WaitForSeconds(timeToWait);
+    }
+
 }
