@@ -70,7 +70,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ParallaxMap:
-        m_Texture: {fileID: 2800000, guid: 6356d626d00828f47b568f1bf7ca4939, type: 3}
+        m_Texture: {fileID: 2800000, guid: 8cb70a5e86aa8d54c9804df34de8caf1, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SpecGlossMap:
