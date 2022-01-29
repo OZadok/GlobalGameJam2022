@@ -39,8 +39,8 @@ ModelImporter:
       name: Marco Yeling
       takeName: mixamo.com
       internalID: 0
-      firstFrame: 0
-      lastFrame: 179
+      firstFrame: 9
+      lastFrame: 78
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -120,7 +120,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 4.5
+    globalScale: 0.044999998
     rootMotionBoneName: mixamorig:Hips
     hasTranslationDoF: 0
     hasExtraRoot: 0
