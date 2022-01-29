@@ -8,6 +8,7 @@ public class FamilyMovementManager : MonoBehaviour
     public GameObject hood;
     Bounds hoodBounds;
     LayerMask houseMask;
+    bool didResetHoodBounds = false;
     public Transform[] gatheringSpotPositions;
     GatheringSpot[] gatheringSpots;
     struct GatheringSpot {
@@ -22,7 +23,10 @@ public class FamilyMovementManager : MonoBehaviour
 
     void Start()
     {
-        ResetHoodBounds();
+        if (!didResetHoodBounds)
+        {
+            ResetHoodBounds();
+        }
         ResetGatheringSpots(gatheringSpotPositions);
         houseMask = LayerMask.GetMask("House");
     }
@@ -36,6 +40,9 @@ public class FamilyMovementManager : MonoBehaviour
     }
 
     Vector3 GetRandomPosition() {
+        if (!didResetHoodBounds) {
+            ResetHoodBounds();
+        }
         float minX = (hoodBounds.center - hoodBounds.extents).x;
         float maxX = (hoodBounds.center + hoodBounds.extents).x;
         float minZ = (hoodBounds.center - hoodBounds.extents).z;
@@ -51,18 +58,25 @@ public class FamilyMovementManager : MonoBehaviour
             possiblePosition = new Vector3(Random.Range(minX, maxX), 0f, Random.Range(minZ, maxZ));
             rayOrigin = possiblePosition + new Vector3(0f, 10f, 0f);
             if (Physics.Raycast(new Ray(rayOrigin, Vector3.down), out hit, 10f, houseMask))
+            {
                 continue;
+            }
             else
+            {
                 return possiblePosition;
+            }
         }
         throw new UnityException("couldnt find a value for family member destination");
     }
     
     void ResetHoodBounds() {
+        didResetHoodBounds = true;
         hoodBounds = new Bounds(new Vector3(0,0,0), Vector3.one);
-        BoxCollider[] colliders = hood.GetComponentsInChildren<BoxCollider>();
-        foreach (BoxCollider collider in colliders)
+        Collider[] colliders = hood.GetComponentsInChildren<Collider>();
+        foreach (Collider collider in colliders)
+        {
             hoodBounds.Encapsulate(collider.bounds);
+        }
     }
 
     void ResetGatheringSpots(Transform[] gatheringSpotPositions) {
