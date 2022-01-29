@@ -20,6 +20,7 @@ public class WanderState : FamilyMemberState
         this.startWalking = Time.time;
         this.destination = this.familyMember.familyMgr.RequestDestination(this.familyMember);
         this.familyMember.SetDestination(destination);
+        this.familyMember.animator.SetTrigger("Wander");
         GameManager.Instance.OnPosterPost += OnPlayerPosted;
     }
 

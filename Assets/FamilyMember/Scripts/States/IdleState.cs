@@ -16,6 +16,7 @@ public class IdleState : FamilyMemberState
 
     public override void Enter()
     {
+        this.familyMember.animator.SetTrigger("Idle");
         timeToIdle = Random.Range(minWaitTime, maxWaitTime);
         enterTime = Time.time;
     }

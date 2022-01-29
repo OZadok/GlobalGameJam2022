@@ -36,7 +36,7 @@ public class GiveMoneyState : FamilyMemberState
     }
 
     private IEnumerator GiveMoney() {
-        familyMember.animator.SetTrigger("Give Money");
+        familyMember.animator.SetTrigger("GiveMoney");
         yield return WaitAnimationTime();
         GameManager.Instance.FamilyBossDictionary[familyMember.family].IncreaseSalary(coins);
         ChangeToIdle();
