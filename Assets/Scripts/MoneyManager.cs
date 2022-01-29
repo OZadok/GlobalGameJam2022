@@ -46,6 +46,7 @@ public class MoneyManager : MonoBehaviour
         if (TotalMoneyGained < 0)
         {
             // game over;
+            GameManager.Instance.OnGameOver?.Invoke();
         }
     }
 }
