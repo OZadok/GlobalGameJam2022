@@ -971,6 +971,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   swap: {fileID: 11400000, guid: 6de433026715f2e488e222a301d35553, type: 2}
   post: {fileID: 11400000, guid: 8a26bab15eec735469f24d9a57be3f0d, type: 2}
+  giveMoney: {fileID: 11400000, guid: 37eac276b86f46349b527faaea944eb7, type: 2}
+  takeMoney: {fileID: 11400000, guid: bd3a2466c77b1c74a893811154daa2a0, type: 2}
 --- !u!224 &533672213 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5279722867603585234, guid: 150257193ad1c164e8bb546ebf258697, type: 3}
