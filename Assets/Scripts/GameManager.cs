@@ -22,7 +22,8 @@ public class GameManager : MonoBehaviour
     
     public Dictionary<FamilyType, FamilyBoss> FamilyBossDictionary;
 
-    public PlayerScript player; 
+    public PlayerScript player;
+    public bool DebugMode = true;
 
     public UnityAction<Poster> OnPosterPost;
     public UnityAction OnEndOfPeriod;

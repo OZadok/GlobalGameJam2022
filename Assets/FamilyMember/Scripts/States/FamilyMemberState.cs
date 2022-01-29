@@ -5,7 +5,7 @@ using UnityEngine;
 public abstract class FamilyMemberState : States.IState
 {
     [SerializeField] protected FamilyMemberScript familyMember;
-    float sightRadius = 6f;
+    protected float sightRadius = 6f;
 
     public FamilyMemberState(FamilyMemberScript familyMember)
     {
