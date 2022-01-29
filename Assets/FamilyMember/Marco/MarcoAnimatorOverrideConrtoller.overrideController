@@ -8,4 +8,6 @@ AnimatorOverrideController:
   m_PrefabAsset: {fileID: 0}
   m_Name: MarcoAnimatorOverrideConrtoller
   m_Controller: {fileID: 9100000, guid: 4075ef9f971607143a507f4c85d02622, type: 2}
-  m_Clips: []
+  m_Clips:
+  - m_OriginalClip: {fileID: -203655887218126122, guid: c403cf3f70fca994c9f02ae3da796b6a, type: 3}
+    m_OverrideClip: {fileID: -203655887218126122, guid: 261e7240e7b73534ea584fedc090051b, type: 3}
