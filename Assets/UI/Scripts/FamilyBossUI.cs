@@ -22,7 +22,8 @@ public class FamilyBossUI : MonoBehaviour
 	{
 		familyBoss = GameManager.Instance.FamilyBossDictionary[type];
 		familyBoss.OnSalaryChange += OnSalaryChange;
-
+		OnSalaryChange(0);
+		
 		bossImage.sprite = bossOK;
 		
 		GameManager.Instance.OnTakeAwayMoney += OnTakeAwayMoney;

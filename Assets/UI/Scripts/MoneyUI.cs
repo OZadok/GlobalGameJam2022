@@ -18,11 +18,11 @@ public class MoneyUI : MonoBehaviour
 
     private void OnDebtChanged(float value)
     {
-        debtText.text = value.ToString("C0");
+        debtText.text = "Debt: " + value.ToString("C0");
     }
 
     private void OnTotalMoneyChanged(float value)
     {
-        totalMoneyText.text = value.ToString("C0");
+        totalMoneyText.text = "Bank: " + value.ToString("C0");
     }
 }
