@@ -53,6 +53,7 @@ public class FamilyMemberScript : MonoBehaviour
     {
         return agent.SetDestination(target);
     }
+
 }
 
 
