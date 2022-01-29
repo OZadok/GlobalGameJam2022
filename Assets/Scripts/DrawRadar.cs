@@ -25,7 +25,7 @@ public class DrawRadar : MonoBehaviour
             Theta += (2.0f * Mathf.PI * ThetaScale);
             float x = radius * Mathf.Cos(Theta);
             float z = radius * Mathf.Sin(Theta);
-            LineDrawer.SetPosition(i, transform.position + new Vector3(x, 0, z));
+            LineDrawer.SetPosition(i, transform.position + new Vector3(x, 0.2f, z));
         }
     }
 }

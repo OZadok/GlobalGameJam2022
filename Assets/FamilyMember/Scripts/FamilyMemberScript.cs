@@ -11,12 +11,15 @@ public class FamilyMemberScript : MonoBehaviour
     public NavMeshAgent agent { get; private set; }
     public Animator animator { get; private set; }
 
+    public ParticleSystem particles { get; private set; }
+
     public FamilyType family;
     internal StateMachine StateMachine;
     public WanderState wanderState;
     public IdleState idleState;
     public GiveMoneyState giveMoneyState;
     public TakeMoneyState takeMoneyState;
+ 
 
     private GameObject targetGameObject;
 
@@ -24,6 +27,7 @@ public class FamilyMemberScript : MonoBehaviour
     {
         agent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
+        particles = GetComponent<ParticleSystem>();
     }
 
     private void Start()
