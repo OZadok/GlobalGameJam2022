@@ -34,6 +34,9 @@ public class GameManager : MonoBehaviour
     public UnityAction OnTakeAwayMoney;
     public UnityAction OnGiveMoney;
 
+    public UnityAction OnGameOver;
+    public UnityAction OnStartGame;
+
     private void Awake()
     {
         Instance = this;
@@ -53,6 +56,13 @@ public class GameManager : MonoBehaviour
         if (player == null) {
             player = FindObjectOfType<PlayerScript>();
         }
+    }
+
+    void Start()
+    {
+        Time.timeScale = 0;
+        OnStartGame += () => { Time.timeScale = 1; };
+        OnGameOver += () => { Time.timeScale = 0; };
     }
 
     private void Update()
