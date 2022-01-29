@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &2036080158737367856
+--- !u!1001 &8481228705391250184
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -9,11 +9,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1583528176313802164, guid: c26994545b087cd47b8ec2743dbd82a5, type: 3}
       propertyPath: Type
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2534703641961811044, guid: c26994545b087cd47b8ec2743dbd82a5, type: 3}
       propertyPath: m_Name
-      value: Poster Type A
+      value: Poster Type B
       objectReference: {fileID: 0}
     - target: {fileID: 4739313283104479362, guid: c26994545b087cd47b8ec2743dbd82a5, type: 3}
       propertyPath: m_RootOrder
@@ -62,6 +62,6 @@ PrefabInstance:
     - target: {fileID: 5740583935875176531, guid: c26994545b087cd47b8ec2743dbd82a5, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 3f904c3aed2ced34e91c4269d6d8fdfe, type: 2}
+      objectReference: {fileID: 2100000, guid: 4dd381b2c4c1ef34caf2a3ea90dafc8c, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c26994545b087cd47b8ec2743dbd82a5, type: 3}
