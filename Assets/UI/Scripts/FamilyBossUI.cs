@@ -19,6 +19,6 @@ public class FamilyBossUI : MonoBehaviour
 
 	private void OnSalaryChange(int salary)
 	{
-		salaryText.text = salary.ToString();
+		salaryText.text = salary.ToString("C0");
 	}
 }

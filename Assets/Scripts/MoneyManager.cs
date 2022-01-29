@@ -6,21 +6,43 @@ using UnityEngine;
 
 public class MoneyManager : MonoBehaviour
 {
-    public int TotalMoneyGained { get; set; }
-    public int Debt { get; set; }
-
+    [SerializeField] private int totalMoneyGained;
     [SerializeField] private int periodDebt = 10;
+
+    public int TotalMoneyGained
+    {
+        get => totalMoneyGained;
+        set
+        {
+            totalMoneyGained = value;
+            GameManager.Instance.OnTotalMoneyChanged?.Invoke(totalMoneyGained);
+        }
+    }
+
+    
+    public int PeriodDebt
+    {
+        get => periodDebt;
+        set
+        {
+            periodDebt = value;
+            GameManager.Instance.OnDebtChanged?.Invoke(periodDebt);
+        }
+    }
 
     private void Start()
     {
         GameManager.Instance.OnEndOfPeriod += OnEndOfPeriod;
+        
+        GameManager.Instance.OnTotalMoneyChanged?.Invoke(totalMoneyGained);
+        GameManager.Instance.OnDebtChanged?.Invoke(periodDebt);
     }
 
     private void OnEndOfPeriod()
     {
         var salary = GameManager.Instance.FamilyBossDictionary.Values.Sum(familyBoss => familyBoss.GetAndZeroSalary());
         TotalMoneyGained += salary;
-        TotalMoneyGained -= Debt;
+        TotalMoneyGained -= PeriodDebt;
         if (TotalMoneyGained < 0)
         {
             // game over;

@@ -23,6 +23,8 @@ public class GameManager : MonoBehaviour
 
     public UnityAction<Poster> OnPosterPost;
     public UnityAction OnEndOfPeriod;
+    public UnityAction<float> OnTotalMoneyChanged;
+    public UnityAction<float> OnDebtChanged;
 
     private void Awake()
     {
