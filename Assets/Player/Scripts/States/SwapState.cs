@@ -48,19 +48,21 @@ public class SwapState : PlayerState
 		player.Animator.SetTrigger(Swap1);
 		yield return WaitAnimationTime();
 
-		switch (player.FamilyType)
+
+        switch (player.FamilyType)
 		{
-			case FamilyType.A:
-				player.FamilyType = FamilyType.B;
+			case FamilyType.Lucas:
+				player.FamilyType = FamilyType.Marco;
 				break;
-			case FamilyType.B:
-				player.FamilyType = FamilyType.A;
+			case FamilyType.Marco:
+				player.FamilyType = FamilyType.Lucas;
 				break;
 			default:
-				player.FamilyType = FamilyType.A;
+				player.FamilyType = FamilyType.Marco;
 				break;
 		}
-		Debug.Log($"player new family type: {player.FamilyType}");
+        player.SwapToMask(player.FamilyType);
+        Debug.Log($"player new family type: {player.FamilyType}");
 	}
 	
 	private IEnumerator CantSwap()
@@ -70,4 +72,6 @@ public class SwapState : PlayerState
 		// wait for the animation to end
 		yield return WaitAnimationTime();
 	}
+
+
 }

@@ -10,8 +10,8 @@ public class GameManager : MonoBehaviour
 
     [Header("References")] 
     [SerializeField] private Poster posterPrefab;
-    [SerializeField] private Poster posterTypeAPrefab;
-    [SerializeField] private Poster posterTypeBPrefab;
+    [SerializeField] private Poster posterTypeLucasPrefab;
+    [SerializeField] private Poster posterTypeMarcoPrefab;
 
     public SalaryTimer SalaryTimer;
     
@@ -20,6 +20,8 @@ public class GameManager : MonoBehaviour
     public List<Postable> Postables { get; set; }
     
     public Dictionary<FamilyType, FamilyBoss> FamilyBossDictionary;
+
+    public PlayerScript player; 
 
     public UnityAction<Poster> OnPosterPost;
     public UnityAction OnEndOfPeriod;
@@ -33,12 +35,17 @@ public class GameManager : MonoBehaviour
 
         FamilyBossDictionary = new Dictionary<FamilyType, FamilyBoss>
         {
-            {FamilyType.A, new FamilyBoss()}, {FamilyType.B, new FamilyBoss()}
+            { FamilyType.Lucas, new FamilyBoss() },
+            { FamilyType.Marco, new FamilyBoss() }
         };
 
         if (SalaryTimer == null)
         {
             SalaryTimer = GetComponent<SalaryTimer>();
+        }
+
+        if (player == null) {
+            player = FindObjectOfType<PlayerScript>();
         }
     }
 
@@ -51,8 +58,8 @@ public class GameManager : MonoBehaviour
     {
         return type switch
         {
-            FamilyType.A => Instantiate(posterTypeAPrefab),
-            FamilyType.B => Instantiate(posterTypeBPrefab),
+            FamilyType.Lucas => Instantiate(posterTypeLucasPrefab),
+            FamilyType.Marco => Instantiate(posterTypeMarcoPrefab),
             _ => Instantiate(posterPrefab)
         };
     }
