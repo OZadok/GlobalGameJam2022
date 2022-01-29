@@ -9,6 +9,8 @@ public class DrawRadar : MonoBehaviour
     private int Size;
     private LineRenderer LineDrawer;
     private float Theta = 0f;
+    public float height = 0f;
+    public bool autoDraw = false;
 
     void Start()
     {
@@ -16,6 +18,13 @@ public class DrawRadar : MonoBehaviour
     }
 
     void Update()
+    {
+        if (autoDraw) {
+            Draw();
+        }
+    }
+
+    public void Draw()
     {
         Theta = 0f;
         Size = (int)((1f / ThetaScale) + 1f);
@@ -25,7 +34,7 @@ public class DrawRadar : MonoBehaviour
             Theta += (2.0f * Mathf.PI * ThetaScale);
             float x = radius * Mathf.Cos(Theta);
             float z = radius * Mathf.Sin(Theta);
-            LineDrawer.SetPosition(i, transform.position + new Vector3(x, 0.2f, z));
+            LineDrawer.SetPosition(i, transform.position + new Vector3(x, height, z));
         }
     }
 }

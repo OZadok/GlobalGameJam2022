@@ -7,7 +7,7 @@ public class WanderState : FamilyMemberState
 
     Vector3 destination;
     float EPSILON = 0.01f;
-    float walkTooLong = 12f;
+    float walkTooLong = 20f;
     float startWalking;
 
     public WanderState(FamilyMemberScript familyMember) : base(familyMember)

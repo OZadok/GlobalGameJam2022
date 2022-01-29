@@ -1232,6 +1232,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -6775512547842844300, guid: 0d60a2151844ccf409a2a4a122960284, type: 3}
+      propertyPath: autoDraw
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 211562917563389995, guid: 0d60a2151844ccf409a2a4a122960284, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -1269,9 +1273,13 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7050286417449725173, guid: 0d60a2151844ccf409a2a4a122960284, type: 3}
+      propertyPath: m_Parameters.textureMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7050286417449725173, guid: 0d60a2151844ccf409a2a4a122960284, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ea62379fd89d60b459e2cf2964430e1d, type: 2}
+      objectReference: {fileID: 2100000, guid: 897b91f96e397a14ea3207303bf11010, type: 2}
     - target: {fileID: 7050286417449725173, guid: 0d60a2151844ccf409a2a4a122960284, type: 3}
       propertyPath: m_Parameters.colorGradient.ctime1
       value: 64764

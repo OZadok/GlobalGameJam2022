@@ -1751,6 +1751,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -6775512547842844300, guid: 0d60a2151844ccf409a2a4a122960284, type: 3}
+      propertyPath: autoDraw
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 676641381925735907, guid: 0d60a2151844ccf409a2a4a122960284, type: 3}
       propertyPath: m_Avatar
       value: 
@@ -1767,6 +1771,14 @@ PrefabInstance:
       propertyPath: m_Speed
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 7050286417449725173, guid: 0d60a2151844ccf409a2a4a122960284, type: 3}
+      propertyPath: m_Parameters.textureMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7050286417449725173, guid: 0d60a2151844ccf409a2a4a122960284, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8f534e0af43cb2649b0c5543a4ad32cc, type: 2}
     - target: {fileID: 7050286417449725173, guid: 0d60a2151844ccf409a2a4a122960284, type: 3}
       propertyPath: m_Parameters.colorGradient.ctime0
       value: 0
