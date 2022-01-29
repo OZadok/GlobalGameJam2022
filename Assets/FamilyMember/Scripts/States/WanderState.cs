@@ -20,6 +20,7 @@ public class WanderState : FamilyMemberState
         this.startWalking = Time.time;
         this.destination = this.familyMember.familyMgr.RequestDestination(this.familyMember);
         this.familyMember.SetDestination(destination);
+        familyMember.agent.isStopped = false;
         this.familyMember.animator.SetTrigger("Wander");
         GameManager.Instance.OnPosterPost += OnPlayerPosted;
     }
@@ -59,6 +60,7 @@ public class WanderState : FamilyMemberState
     public override void Exit()
     {
         GameManager.Instance.OnPosterPost -= OnPlayerPosted;
+        familyMember.agent.isStopped = true;
     }
 
     bool IsArrivedAtDestination()
