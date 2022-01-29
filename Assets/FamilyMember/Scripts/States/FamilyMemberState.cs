@@ -5,6 +5,7 @@ using UnityEngine;
 public abstract class FamilyMemberState : States.IState
 {
     [SerializeField] protected FamilyMemberScript familyMember;
+    float sightRadius = 6f;
 
     public FamilyMemberState(FamilyMemberScript familyMember)
     {
@@ -43,6 +44,29 @@ public abstract class FamilyMemberState : States.IState
         yield return null;
         float timeToWait = GetAnimationClipLength();
         yield return new WaitForSeconds(timeToWait);
+    }
+
+    public void OnPlayerPosted(Poster poster)
+    {
+        if (!IsPosterSpotted(poster))
+        {
+            return;
+        }
+        if (poster.Type == familyMember.family)
+        {
+            ChangeToGiveMoney();
+        }
+        else
+        {
+            ChangeToTakeMoney();
+        }
+    }
+
+    bool IsPosterSpotted(Poster poster)
+    {
+        bool canSee = familyMember.gameObject.CanSee(poster.gameObject);
+        bool isNear = Vector3.Distance(familyMember.transform.position, poster.transform.position) < sightRadius;
+        return canSee && isNear;
     }
 
 }

@@ -19,6 +19,8 @@ public class IdleState : FamilyMemberState
         this.familyMember.animator.SetTrigger("Idle");
         timeToIdle = Random.Range(minWaitTime, maxWaitTime);
         enterTime = Time.time;
+
+        GameManager.Instance.OnPosterPost += OnPlayerPosted;
     }
 
     public override void ExecuteFixedUpdate()
@@ -34,6 +36,7 @@ public class IdleState : FamilyMemberState
 
     public override void Exit()
     {
+        GameManager.Instance.OnPosterPost -= OnPlayerPosted;
     }
 
 }

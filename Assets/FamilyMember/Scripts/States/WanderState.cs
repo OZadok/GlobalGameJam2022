@@ -9,7 +9,6 @@ public class WanderState : FamilyMemberState
     float EPSILON = 0.01f;
     public bool isDebug = true;
     float walkTooLong = 12f;
-    float sightRadius = 6f;
     float startWalking;
 
     public WanderState(FamilyMemberScript familyMember) : base(familyMember)
@@ -22,6 +21,7 @@ public class WanderState : FamilyMemberState
         this.familyMember.SetDestination(destination);
         familyMember.agent.isStopped = false;
         this.familyMember.animator.SetTrigger("Wander");
+
         GameManager.Instance.OnPosterPost += OnPlayerPosted;
     }
 
@@ -43,20 +43,6 @@ public class WanderState : FamilyMemberState
 
     }
 
-    public void OnPlayerPosted(Poster poster) {
-        if (!IsPosterSpotted(poster))
-        {
-            return;
-        }
-        if (poster.Type == familyMember.family)
-        {
-            ChangeToGiveMoney();
-        }
-        else {
-            ChangeToTakeMoney();
-        }
-    }
-
     public override void Exit()
     {
         GameManager.Instance.OnPosterPost -= OnPlayerPosted;
@@ -73,12 +59,6 @@ public class WanderState : FamilyMemberState
 
     bool IsWalkingTooLong() {
         return (Time.time - this.startWalking) >= walkTooLong;
-    }
-
-    bool IsPosterSpotted(Poster poster) {
-        bool canSee = familyMember.gameObject.CanSee(poster.gameObject);
-        bool isNear = Vector3.Distance(familyMember.transform.position, poster.transform.position) < sightRadius;
-        return canSee && isNear;
     }
 
     void DebugDrawPath()
