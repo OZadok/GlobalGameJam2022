@@ -42,13 +42,13 @@ public class Postable : MonoBehaviour
     {
         var rotation = postPositionPoint.rotation;
         var positionOffset = rotation * UnityEngine.Random.insideUnitCircle * maxRandomDistance;
-        var positionAddOffset = postPositionPoint.forward * (-1f * numOfPosters * addOffset);
+        var positionAddOffset = postPositionPoint.forward * (-1f * (numOfPosters + 1) * addOffset);
         Transform posterTransform;
         (posterTransform = poster.transform).position = GetPostPosition() + positionOffset + positionAddOffset;
 
         posterTransform.rotation = rotation;
         var rotationOffset = UnityEngine.Random.Range(-maxRandomAngle, maxRandomAngle);
-        poster.transform.Rotate(postPositionPoint.forward, rotationOffset);
+        poster.transform.Rotate(Vector3.forward, rotationOffset);
     }
 
     public Vector3 GetPostPosition()
