@@ -70,7 +70,6 @@ public class PostState : PlayerState
 
 	private IEnumerator Post(Postable postable)
 	{
-		
 		// play post animation.
 		player.Animator.SetTrigger(Post1);
 		yield return WaitAnimationTime();

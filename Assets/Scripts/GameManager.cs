@@ -28,6 +28,8 @@ public class GameManager : MonoBehaviour
     public UnityAction<float> OnTotalMoneyChanged;
     public UnityAction<float> OnDebtChanged;
 
+    public UnityAction OnPlayerSwap;
+
     private void Awake()
     {
         Instance = this;

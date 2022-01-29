@@ -70,6 +70,7 @@ public class SwapState : PlayerState
     }
 
     IEnumerator SwapMasks(float seconds, FamilyType familyType) {
+	    GameManager.Instance.OnPlayerSwap?.Invoke();
         yield return new WaitForSeconds(seconds);
         player.SwapToMask(familyType);
     }
