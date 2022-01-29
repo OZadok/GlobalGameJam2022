@@ -13,8 +13,21 @@ public class SwapState : PlayerState
 
 	public override void Enter()
 	{
-		player.StartCoroutine(EnterEnumerable());
+        FamilyType newFamilyType = GetNewFamilyType();
+        if (CanSwap())
+        {
+            player.StartCoroutine(SwapMasks(1f, newFamilyType));
+            player.StartCoroutine(SwapFamilyTypeAndExit(newFamilyType));
+        }
+        else {
+            ChangeToMovement();
+        }
+
 	}
+
+    bool CanSwap() {
+        return true;
+    }
 
 	public override void ExecuteUpdate()
 	{
@@ -28,41 +41,12 @@ public class SwapState : PlayerState
 	{
 	}
 	
-	private IEnumerator EnterEnumerable()
+	private IEnumerator SwapFamilyTypeAndExit(FamilyType newFamilyType)
 	{
-		//check if can do Swap.
-		if ( /*can't do Swap*/false)
-		{
-			yield return player.StartCoroutine(CantSwap());
-		}
-		else
-		{
-			yield return player.StartCoroutine(Swap());
-		}
-
-		ChangeToMovement();
-	}
-
-	private IEnumerator Swap()
-	{
-		player.Animator.SetTrigger(Swap1);
-		yield return WaitAnimationTime();
-
-
-        switch (player.FamilyType)
-		{
-			case FamilyType.Lucas:
-				player.FamilyType = FamilyType.Marco;
-				break;
-			case FamilyType.Marco:
-				player.FamilyType = FamilyType.Lucas;
-				break;
-			default:
-				player.FamilyType = FamilyType.Marco;
-				break;
-		}
-        player.SwapToMask(player.FamilyType);
-        Debug.Log($"player new family type: {player.FamilyType}");
+        player.Animator.SetTrigger(Swap1);
+        yield return WaitAnimationTime();
+        player.FamilyType = newFamilyType;
+        ChangeToMovement();
 	}
 	
 	private IEnumerator CantSwap()
@@ -72,6 +56,23 @@ public class SwapState : PlayerState
 		// wait for the animation to end
 		yield return WaitAnimationTime();
 	}
+
+    FamilyType GetNewFamilyType() {
+        switch (player.FamilyType)
+        {
+            case FamilyType.Lucas:
+                return FamilyType.Marco;
+            case FamilyType.Marco:
+                return FamilyType.Lucas;
+            default:
+                return FamilyType.Marco;
+        }
+    }
+
+    IEnumerator SwapMasks(float seconds, FamilyType familyType) {
+        yield return new WaitForSeconds(seconds);
+        player.SwapToMask(familyType);
+    }
 
 
 }
