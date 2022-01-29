@@ -12,6 +12,7 @@ public class TakeMoneyState : FamilyMemberState
 
     public override void Enter()
     {
+        familyMember.StartCoroutine(TakeAwayMoney());
     }
 
     public override void ExecuteFixedUpdate()
@@ -27,6 +28,14 @@ public class TakeMoneyState : FamilyMemberState
     public override void Exit()
     {
 
+    }
+
+    private IEnumerator TakeAwayMoney()
+    {
+        familyMember.animator.SetTrigger("Take Money");
+        yield return WaitAnimationTime();
+        GameManager.Instance.FamilyBossDictionary[familyMember.family].GetAndZeroSalary();
+        ChangeToIdle();
     }
 
 }
