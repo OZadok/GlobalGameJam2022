@@ -29,6 +29,8 @@ public class GameManager : MonoBehaviour
     public UnityAction<float> OnDebtChanged;
 
     public UnityAction OnPlayerSwap;
+    public UnityAction OnTakeAwayMoney;
+    public UnityAction OnGiveMoney;
 
     private void Awake()
     {
