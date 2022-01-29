@@ -3,7 +3,12 @@ guid: d048f2fe7d255184c860c6360234edc1
 ModelImporter:
   serializedVersion: 21202
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lucas_mtl
+    second: {fileID: 2100000, guid: d5e66a14198486c4fa952a091eed1c82, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -88,7 +93,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 1.65
+    globalScale: 165
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0

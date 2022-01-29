@@ -42,9 +42,16 @@ public class WanderState : FamilyMemberState
     }
 
     public void OnPlayerPosted(Poster poster) {
-        if (IsPosterSpotted(poster) && poster.Type == familyMember.family)
+        if (!IsPosterSpotted(poster))
+        {
+            return;
+        }
+        if (poster.Type == familyMember.family)
         {
             ChangeToGiveMoney();
+        }
+        else {
+            ChangeToTakeMoney();
         }
     }
 
