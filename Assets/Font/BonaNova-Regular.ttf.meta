@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: e480e9520b359c847a35a8823649b3b8
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Bona Nova
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: a0a0f3a284baa2146aa8ccb07d556224, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
