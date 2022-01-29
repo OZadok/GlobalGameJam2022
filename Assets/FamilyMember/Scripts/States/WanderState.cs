@@ -34,7 +34,7 @@ public class WanderState : FamilyMemberState
             DebugDrawPath();
         }
 
-        else if (IsArrivedAtDestination() || IsWalkingTooLong())
+        if (IsArrivedAtDestination() || IsWalkingTooLong())
         {
             ChangeToIdle();
         }
