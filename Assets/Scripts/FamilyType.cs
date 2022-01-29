@@ -6,6 +6,6 @@ using System;
 public enum FamilyType 
 {
     None,
-	A,
-	B
+	Lucas,
+	Marco
 }

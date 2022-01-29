@@ -17,6 +17,8 @@ public class PlayerScript : MonoBehaviour
 	public PostState PostState;
 	public SwapState SwapState;
 
+    public Dictionary<FamilyType, MaskScript> masks; 
+
 	public FamilyType FamilyType = FamilyType.None;
 
 	private void Awake()
@@ -41,13 +43,18 @@ public class PlayerScript : MonoBehaviour
 		MovementState = new MovementState(this);
 		PostState = new PostState(this);
 		SwapState = new SwapState(this);
-	}
+
+        GameManager.Instance.player = this;
+
+        masks = new Dictionary<FamilyType, MaskScript>();
+    }
 
 	private void Start()
 	{
 		StateMachine = ScriptableObject.CreateInstance <States.StateMachine>();
 		StateMachine.ChangeState(MovementState);
-	}
+        SwapToMask(FamilyType);
+    }
 
 	private void Reset()
 	{
@@ -78,4 +85,18 @@ public class PlayerScript : MonoBehaviour
 	{
 		StateMachine.FixedUpdate();
 	}
+
+    public void RegisterMask(MaskScript mask) {
+        masks[mask.family] = mask;
+    }
+
+    public void SwapToMask(FamilyType maskFamilyType)
+    {
+        foreach (FamilyType familyType in masks.Keys)
+        {
+            bool shouldActivate = (familyType == maskFamilyType);
+            masks[familyType].SetMask(shouldActivate);
+        }
+    }
+
 }
