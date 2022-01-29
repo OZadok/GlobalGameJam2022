@@ -7,7 +7,6 @@ public class WanderState : FamilyMemberState
 
     Vector3 destination;
     float EPSILON = 0.01f;
-    public bool isDebug = true;
     float walkTooLong = 12f;
     float startWalking;
 
@@ -31,9 +30,10 @@ public class WanderState : FamilyMemberState
 
     public override void ExecuteUpdate()
     {
-        if (isDebug)
+        if (GameManager.Instance.DebugMode)
         {
             DebugDrawPath();
+            DebugDrawRadius();
         }
 
         if (IsArrivedAtDestination() || IsWalkingTooLong())
@@ -70,5 +70,12 @@ public class WanderState : FamilyMemberState
             curr = p;
         }
     }
+
+    void DebugDrawRadius() {
+        Vector3 from = familyMember.transform.position;
+        Vector3 to = from + new Vector3(0f, 0f, sightRadius);
+        Debug.DrawLine(from, to, Color.yellow);
+    }
+
 
 }
