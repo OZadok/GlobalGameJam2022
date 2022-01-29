@@ -3500,10 +3500,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Marco FamilyMember Variant
       objectReference: {fileID: 0}
-    - target: {fileID: 8045866433752939990, guid: ec44f6cbccb8be34687438c1816d875c, type: 3}
-      propertyPath: m_Parameters.widthMultiplier
-      value: 0.3
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec44f6cbccb8be34687438c1816d875c, type: 3}
 --- !u!4 &1502450139 stripped
@@ -4840,7 +4836,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 4.157613e+21, y: 1.12520376e+24, z: 1.817742e+31, w: 1.8053851e+28}
+  m_BoundingSphereOverride: {x: 7.43e-43, y: 7.1e-44, z: 0, w: -0.00000009696163}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0

@@ -17,18 +17,15 @@ public class DrawRadar : MonoBehaviour
 
     void Update()
     {
-        if (GameManager.Instance.DebugMode)
+        Theta = 0f;
+        Size = (int)((1f / ThetaScale) + 1f);
+        LineDrawer.positionCount = Size;
+        for (int i = 0; i < Size; i++)
         {
-            Theta = 0f;
-            Size = (int)((1f / ThetaScale) + 1f);
-            LineDrawer.positionCount = Size;
-            for (int i = 0; i < Size; i++)
-            {
-                Theta += (2.0f * Mathf.PI * ThetaScale);
-                float x = radius * Mathf.Cos(Theta);
-                float z = radius * Mathf.Sin(Theta);
-                LineDrawer.SetPosition(i, transform.position + new Vector3(x, 0, z));
-            }
+            Theta += (2.0f * Mathf.PI * ThetaScale);
+            float x = radius * Mathf.Cos(Theta);
+            float z = radius * Mathf.Sin(Theta);
+            LineDrawer.SetPosition(i, transform.position + new Vector3(x, 0, z));
         }
     }
 }
