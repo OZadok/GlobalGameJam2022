@@ -5,9 +5,11 @@ using UnityEngine;
 
 public class SalaryTimer : MonoBehaviour
 {
-    [SerializeField] private float periodTime;
+    
+    public float PeriodTime => periodTime;
 
     private float lastTimePeriodStart;
+    [SerializeField] private float periodTime;
 
     private void Start()
     {
@@ -19,7 +21,7 @@ public class SalaryTimer : MonoBehaviour
         while (true)
         {
             lastTimePeriodStart = Time.time;
-            yield return new WaitForSeconds(periodTime);
+            yield return new WaitForSeconds(PeriodTime);
             GameManager.Instance.OnEndOfPeriod?.Invoke();
         }
     }
@@ -27,6 +29,6 @@ public class SalaryTimer : MonoBehaviour
     public float GetTimeRemain()
     {
         var timePast = Time.time - lastTimePeriodStart;
-        return periodTime - timePast;
+        return PeriodTime - timePast;
     }
 }
