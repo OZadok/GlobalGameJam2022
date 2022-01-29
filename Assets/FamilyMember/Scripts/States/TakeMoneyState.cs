@@ -32,7 +32,7 @@ public class TakeMoneyState : FamilyMemberState
 
     private IEnumerator TakeAwayMoney()
     {
-        GameManager.Instance.OnTakeAwayMoney?.Invoke();
+        //GameManager.Instance.OnTakeAwayMoney?.Invoke();
         familyMember.animator.SetTrigger("Yell");
         yield return WaitAnimationTime();
         GameManager.Instance.FamilyBossDictionary[familyMember.family].GetAndZeroSalary();

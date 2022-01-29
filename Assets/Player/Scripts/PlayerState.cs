@@ -35,7 +35,10 @@ public abstract class PlayerState : States.IState {
 
     protected float GetAnimationClipLength()
     {
-        return player.Animator.GetCurrentAnimatorClipInfo(0)[0].clip.length;
+        //float speed = player.Animator.GetNextAnimatorStateInfo(0).speedMultiplier;
+        //float length = player.Animator.GetCurrentAnimatorClipInfo(0)[0].clip.length;
+        //return length / speed;
+        return player.Animator.GetNextAnimatorStateInfo(0).length;
     }
 
     protected IEnumerator WaitAnimationTime()

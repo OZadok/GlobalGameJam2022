@@ -36,7 +36,10 @@ public abstract class FamilyMemberState : States.IState
 
     protected float GetAnimationClipLength()
     {
-        return familyMember.animator.GetCurrentAnimatorClipInfo(0)[0].clip.length;
+        //float speed = familyMember.animator.GetNextAnimatorStateInfo(0).speedMultiplier;
+        //float length = familyMember.animator.GetCurrentAnimatorClipInfo(0)[0].clip.length;
+        //return length / speed;
+        return familyMember.animator.GetNextAnimatorStateInfo(0).length;
     }
 
     protected IEnumerator WaitAnimationTime()
