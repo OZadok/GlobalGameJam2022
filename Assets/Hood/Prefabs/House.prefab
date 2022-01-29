@@ -46,7 +46,7 @@ GameObject:
   - component: {fileID: 3236945010229132107}
   - component: {fileID: 4950514208809344981}
   - component: {fileID: 6053086595269099416}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: House colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
