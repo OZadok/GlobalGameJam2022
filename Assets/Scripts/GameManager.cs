@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Poster posterTypeMarcoPrefab;
 
     public SalaryTimer SalaryTimer;
+    public MoneyManager MoneyManager;
     
     [Header("Parameters")]
     public LayerMask blockViewMask;
@@ -51,6 +52,10 @@ public class GameManager : MonoBehaviour
         if (SalaryTimer == null)
         {
             SalaryTimer = GetComponent<SalaryTimer>();
+        }
+        if (MoneyManager == null)
+        {
+            MoneyManager = GetComponent<MoneyManager>();
         }
 
         if (player == null) {

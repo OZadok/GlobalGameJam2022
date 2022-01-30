@@ -14,15 +14,23 @@ public class MoneyUI : MonoBehaviour
     {
         GameManager.Instance.OnTotalMoneyChanged += OnTotalMoneyChanged;
         GameManager.Instance.OnDebtChanged += OnDebtChanged;
+
+        OnDebtChanged(GameManager.Instance.MoneyManager.PeriodDebt);
+        OnTotalMoneyChanged(GameManager.Instance.MoneyManager.TotalMoneyGained);
     }
 
     private void OnDebtChanged(float value)
     {
-        debtText.text = "Debt: " + value.ToString("C0");
+        debtText.text = "Debt: " + GetCurrencyString(value);
     }
 
     private void OnTotalMoneyChanged(float value)
     {
-        totalMoneyText.text = "Bank: " + value.ToString("C0");
+        totalMoneyText.text = "Bank: " + GetCurrencyString(value);
+    }
+
+    public static string GetCurrencyString(float number)
+    {
+        return string.Format(new System.Globalization.CultureInfo("it-IT"), "{0:C0}", number);
     }
 }

@@ -42,6 +42,6 @@ public class FamilyBossUI : MonoBehaviour
 
 	private void OnSalaryChange(int salary)
 	{
-		salaryText.text = salary.ToString("C0");
+		salaryText.text = MoneyUI.GetCurrencyString(salary);
 	}
 }

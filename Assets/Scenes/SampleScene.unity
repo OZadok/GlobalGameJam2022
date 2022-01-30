@@ -3666,7 +3666,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1400926201
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3943,7 +3943,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2733409347988231674, guid: 4adf568ac7964e04cbbd022849438fc6, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -50
+      value: -75
       objectReference: {fileID: 0}
     - target: {fileID: 7056420185630973780, guid: 4adf568ac7964e04cbbd022849438fc6, type: 3}
       propertyPath: type
@@ -4271,6 +4271,7 @@ MonoBehaviour:
   posterTypeLucasPrefab: {fileID: 700395922366045828, guid: 9460e7df3cc633b4e9e70004d227b074, type: 3}
   posterTypeMarcoPrefab: {fileID: 6938554915395507900, guid: 8a84efb780e5cc4438d0adee1d7ecc09, type: 3}
   SalaryTimer: {fileID: 1853975309}
+  MoneyManager: {fileID: 0}
   blockViewMask:
     serializedVersion: 2
     m_Bits: 1024
