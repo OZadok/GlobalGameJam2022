@@ -20,7 +20,21 @@ public class MovementState : PlayerState
 		player.InputBehaviour.OnPostAction += ChangeToPost;
 		player.InputBehaviour.OnSwapAction += ChangeToSwap;
 		
-		player.Animator.SetTrigger(player.InputBehaviour.Movement.sqrMagnitude > 0 ? Walk : Idle);
+		player.Animator.ResetTrigger(Walk);
+		player.Animator.ResetTrigger(Idle);
+		
+		// player.Animator.SetTrigger(player.InputBehaviour.Movement.sqrMagnitude > 0 ? Walk : Idle);
+		
+		isWalking = player.InputBehaviour.Movement.sqrMagnitude > 0;
+		switch (isWalking)
+		{
+			case true when !player.Animator.GetCurrentAnimatorStateInfo(0).IsName("Walk"):
+				player.Animator.SetTrigger(Walk);
+				break;
+			case false when !player.Animator.GetCurrentAnimatorStateInfo(0).IsName("Idle"):
+				player.Animator.SetTrigger(Idle);
+				break;
+		}
 	}
 
 	public override void ExecuteUpdate()
@@ -41,13 +55,26 @@ public class MovementState : PlayerState
 	
 	private void Move(Vector2 movement)
 	{
-		var lastIsWalking = isWalking;
+		// var lastIsWalking = isWalking;
 		isWalking = movement.sqrMagnitude > 0;
+		
+		player.Animator.ResetTrigger(Walk);
+		player.Animator.ResetTrigger(Idle);
 
-		if (lastIsWalking != isWalking)
+		switch (isWalking)
 		{
-			player.Animator.SetTrigger(isWalking ? Walk : Idle);
+			case true when !player.Animator.GetCurrentAnimatorStateInfo(0).IsName("Walk"):
+				player.Animator.SetTrigger(Walk);
+				break;
+			case false when !player.Animator.GetCurrentAnimatorStateInfo(0).IsName("Idle"):
+				player.Animator.SetTrigger(Idle);
+				break;
 		}
+		Debug.Log($"input: {movement}");
+		// if (lastIsWalking != isWalking)
+		// {
+		// 	player.Animator.SetTrigger(isWalking ? Walk : Idle);
+		// }
 		
 		// // todo - change the movement to be with target speed. i.e. when the vector is zero it should calculate the force to add to get to zero velocity.
 		// if (movement.sqrMagnitude > 1)
