@@ -72,7 +72,7 @@ public class PostState : PlayerState
 	{
 		// play post animation.
 		player.Animator.SetTrigger(Post1);
-		yield return WaitAnimationTime();
+		yield return WaitAnimationTime("Post");
 		//at the end of the animation: post the poster(with type) on the postable object.
 		//create poster
 		var poster = GameManager.Instance.GetPosterOfType(player.FamilyType);
@@ -84,6 +84,6 @@ public class PostState : PlayerState
 		//play animation can't do post
 		player.Animator.SetTrigger(CantDo);
 		// wait for the animation to end
-		yield return WaitAnimationTime();
+		yield return WaitAnimationTime("CantDo");
 	}
 }

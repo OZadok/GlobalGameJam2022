@@ -44,7 +44,7 @@ public class SwapState : PlayerState
 	private IEnumerator SwapFamilyTypeAndExit(FamilyType newFamilyType)
 	{
         player.Animator.SetTrigger(Swap1);
-        yield return WaitAnimationTime();
+        yield return WaitAnimationTime("Swap");
         player.FamilyType = newFamilyType;
         ChangeToMovement();
 	}
@@ -54,7 +54,7 @@ public class SwapState : PlayerState
 		//play animation can't do Swap
 		player.Animator.SetTrigger(CantDo);
 		// wait for the animation to end
-		yield return WaitAnimationTime();
+		yield return WaitAnimationTime("CantDo");
 	}
 
     FamilyType GetNewFamilyType() {
